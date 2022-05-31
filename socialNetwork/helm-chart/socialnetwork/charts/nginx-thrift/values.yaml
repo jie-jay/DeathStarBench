@@ -27,9 +27,9 @@ container:
 
 
 initContainer:
-  image: alpine/git
+  image: bitnami/git
   imageVersion: latest
-  name: alpine-container
+  name: bitnami-git-container
   volumeMounts:
   - name: lua-scripts
     mountPath: /lua-scripts

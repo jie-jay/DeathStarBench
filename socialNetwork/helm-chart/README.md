@@ -31,7 +31,7 @@ In order to override a given value for a config file, a new config (with the new
 `nginx-thrift` and `media-frontend` services require mounted lua-scripts (and other files). For this reason, in both of these pods, there is an init container added that pulls the rquired files from the public DSB repository and mounts them in the right path before the container is started.
 
 ### Changes to config files ###
-In nginx config file, both in `nginx-thrift` and `media-frontend` pods, resolver is set to a value retrieved from global values under `resolverName`. It is set to `kube-dns.kube-system.svc.cluster.local`. <br />
+In nginx config file, both in `nginx-thrift` and `media-frontend` pods, resolver is set to a value retrieved from global values under `resolverName`. It is set to `coredns.kube-system.svc.cluster.local`. <br />
 
 Also `fqdn_suffix` is set to be an environemt variable. Its value is set in `values.yaml` file in corresponding pods. 
 
